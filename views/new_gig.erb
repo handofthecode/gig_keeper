@@ -1,0 +1,24 @@
+<form method="post" action="/new_gig">
+  <label for="name">Event Name</label>
+  <div>
+    <input type="text" name="name" placeholder="New Event" />
+  </div>
+  <label for="date">Date (mm-dd)</label>
+  <div>
+    <input type="text" name="date" placeholder=<%= @date %> />
+    <input type="radio" name="year" value=<%= @year.to_s %>><%= @year %>
+    <input type="radio" name="year" value=<%= @year_1.to_s %>><%= @year_1 %>
+    <input type="radio" name="year" value=<%= @year_2.to_s %>><%= @year_2 %>
+  </div>
+  <label for="time">Time</label>
+  <div>
+    <input type="text" name="time" placeholder=<%= @time %> />
+    <input type="radio" name="pm" value="am">a.m.
+    <input type="radio" name="pm" value="pm">p.m.
+  </div>
+  <label for="notes">Income</label>
+  <div>
+    $<input type="text" name="income" placeholder="75.50" />
+  </div>
+  <button type="submit">Add Gig!</button>
+</form>

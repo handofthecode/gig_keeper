@@ -1,0 +1,77 @@
+header h1 {
+  border: solid;
+  background-color: lightblue;
+  border-radius: 20px;
+  display: inline-block;
+  padding: .2em;
+}
+
+main h2 {
+  text-decoration: underline;
+}
+
+div p#income {
+  background-color: lightgreen;
+  border-radius: 20px;
+  display: inline-block;
+  padding: .2em;
+  font-size: 1.2em;
+  /*margin-left: 5em;*/
+
+}
+
+div#list {
+  background-color: lightpink;
+  border-radius: 20px;
+  display: inline-block;
+  padding: .2em 1em .5em 1em;
+  /*margin-left: 20em;*/
+
+}
+
+.add {
+  background-color: #008CBA;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.past {
+  background-color: red;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.flash p {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.flash {
+  /*max-width: 960px;*/
+  padding: 10px 20px;
+  margin: 20px auto 1.5em auto;
+  color: #FF5733;
+  background: #CBE5F2; 
+}
+
+.flash.success {
+  color: #0faa45;
+  background: #CBF2E5; 
+}
+
+.flash.error {
+  color: #ff1133;
+  background: #FFCFBF; 
+}

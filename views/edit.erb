@@ -1,0 +1,33 @@
+<form method="post" action="/edit">
+  <label for="name">Event Name</label>
+  <div>
+    <input type="text" name="name" value="<%= @name %>" />
+  </div>
+  <label for="date">Date</label>
+  <div>
+    <input type="text" name="date" value="<%= @date %>" />
+
+    <input type="radio" name="year" value="<%= @current_year %>"
+      <%= checked="checked" if @year == @current_year %>><%= @current_year %>
+    <input type="radio" name="year" value="<%= @current_year_1 %>"
+      <%= checked="checked" if @year == @current_year_1 %>><%= @current_year_1 %>
+    <input type="radio" name="year" value="<%= @current_year_2 %>" 
+      <%= checked="checked" if @year == @current_year_2 %>><%= @current_year_2 %>
+  </div>
+  <label for="time">Time</label>
+  <div>
+    <input type="text" name="time" value=<%= @time %> />
+    <input type="radio" name="pm" value="am" <%= checked="checked" if @pm == 'am' %>>a.m.
+    <input type="radio" name="pm" value="pm" <%= checked="checked" if @pm == 'pm' %>>p.m.
+  </div>
+</label>
+  </div>
+  <label for="notes">Income</label>
+  <div>
+    $<input type="text" name="income" value="<%= @income %>" />
+  </div>
+  <br>
+  <button type="submit">Update Gig!</button>
+  <button type="reset">Undo Changes</button>
+</form>
+# <%== <script>alert("Warning!");</script> %>

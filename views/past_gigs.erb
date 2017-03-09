@@ -1,0 +1,26 @@
+<div>
+  <a href="/new_gig"><button class='add'>ADD GIG</button></a>
+  <a href="/"><button class='past'>View Upcoming Gigs</button></a>  
+</div>
+<div id='list'>
+  <h2>Past Gigs:</h2>
+  <ul>
+    <% years = [] %>
+    <% @past_gigs.each do |gig| %>
+      <% year = gig[:date][0, 4] %>
+      
+      <% if !years.include?(year) %>
+        <% years << year %>
+        <%= "<h3>#{year}</h3>" %>
+      <% end %>  
+
+      <li>
+        <a href="/<%= gig[:date] + "&" + gig[:time] %>">
+          <% year, month_day, time, pm = unpack_date_time(gig[:date], gig[:time]) %>
+          <% suffix = (pm == 'pm') ? " p.m." : " a.m." %>
+          <%= "#{month_day} @ #{time + suffix} #{gig[:name]} $#{gig[:income]}" %>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+</div>
